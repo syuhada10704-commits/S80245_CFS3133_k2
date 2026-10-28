@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+    <!-- 
+      PART 1: LIST OF IDENTIFIED ERRORS
+      Error 1 (Line 10): Incorrect closing tag </head> used instead of </header>.
+      Error 2 (Line 20): Used <td> instead of <th> for the "Rating" header column.
+      Error 3 (Line 26): Used an opening <tr> tag instead of a closing </tr> tag for Week 1.
+      Error 4 (Line 28): colspan="3" exceeded the 3-column table count; changed to colspan="2".
+      Error 5 (Line 39): Label 'for="name"' did not match input 'id="fullname"'.
+      Error 6 (Line 42 & 44): Radio buttons had different names ("good" and "poor"), allowing both to be selected.
+      Error 7 (Line 47): Label 'for="labs"' did not match input 'id="lab"'.
+      Error 8 (Line 49): Typo in form closing tag '</from>' instead of '</form>'.
+      Error 9 (Line 52): Missing semicolon in the HTML entity '&copy'.
+    -->
+
+    <!-- Header section containing main title -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <!-- Navigation bar with internal links (Extended with Comments link) -->
+    <nav>
+        <a href="#results">Results</a> | 
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- Section: Feedback Summary Table -->
+        <section id="results">
+            <h2>Feedback Summary</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Introduction to HTML</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <!-- Fixed colspan to 2 so it perfectly fits the 3-column table -->
+                        <td>Tables and Forms</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Semantic HTML</td>
+                        <td>4.0</td>
+                    </tr>
+                    <!-- EXTENSION (Requirement 5): Added Week 4 and Week 5 with rowspan="2" -->
+                    <tr>
+                        <td>4</td>
+                        <td rowspan="2">Mini Project</td>
+                        <td>4.8</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4.9</td>
+                    </tr>
+                    <!-- EXTENSION (Requirement 5): Added Average Rating row with colspan="2" -->
+                    <tr>
+                        <td colspan="2">Average Rating</td>
+                        <td>4.55</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section: Feedback Collection Form -->
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+            <form action="submit_feedback.php" method="post">
+                <!-- Text input for Name -->
+                <div>
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname" name="name" required>
+                </div>
+                <br>
+
+                <!-- EXTENSION (Requirement 6): Added E-mail input with matching label -->
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+
+                <!-- Radio buttons sharing the same name grouping (Fixed & Extended) -->
+                <div>
+                    <label>Overall rating:</label><br>
+                    <input type="radio" id="good" name="rating" value="good">
+                    <label for="good">Good</label>
+                    
+                    <!-- EXTENSION (Requirement 6): Added "Average" radio option -->
+                    <input type="radio" id="average" name="rating" value="average">
+                    <label for="average">Average</label>
+                    
+                    <input type="radio" id="poor" name="rating" value="poor">
+                    <label for="poor">Poor</label>
+                </div>
+                <br>
+
+                <!-- Attendance checkbox with fixed matching labels -->
+                <div>
+                    <input type="checkbox" id="lab" name="lab" value="yes">
+                    <label for="lab">I attended all labs</label>
+                </div>
+                <br>
+
+                <!-- EXTENSION (Requirement 6): Checkboxes for practice topics -->
+                <div>
+                    <label>Topics I want more practice on:</label><br>
+                    <input type="checkbox" id="topic1" name="practice_topics" value="tables">
+                    <label for="topic1">Table Row/Col Spanning</label>
+                    
+                    <input type="checkbox" id="topic2" name="practice_topics" value="forms">
+                    <label for="topic2">Form Validations</label>
+                    
+                    <input type="checkbox" id="topic3" name="practice_topics" value="semantic">
+                    <label for="topic3">Semantic Page Structure</label>
+                </div>
+                <br>
+
+                <!-- EXTENSION (Requirement 6): Drop-down selector for Section/Group -->
+                <div>
+                    <label for="section_group">Section/Group:</label>
+                    <select id="section_group" name="section_group">
+                        <option value="l1">Lab Group 1</option>
+                        <option value="l2">Lab Group 2</option>
+                        <option value="l3">Lab Group 3</option>
+                    </select>
+                </div>
+                <br>
+
+                <!-- Form Submit Button -->
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+
+        <!-- EXTENSION (Requirement 7): Added new Student Comments section with articles -->
+        <section id="comments">
+            <h2>Student Comments</h2>
+            
+            <article>
+                <h3>Siti Aminah</h3>
+                <p>The practical lab exercises are highly engaging and helped solidify my core understanding of building accessible tables.</p>
+            </article>
+
+            <article>
+                <h3>John Doe</h3>
+                <p>The code debugging tasks were challenging but very effective in teaching me how to spot broken markup quickly.</p>
+            </article>
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+</body>
+</html>
