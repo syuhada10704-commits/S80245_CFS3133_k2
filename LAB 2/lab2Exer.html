@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Personal Profile</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#profile">Profile</a> | <a href="#form">Register Form</a>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <main>
+        <!-- Profile Section -->
+        <section id="profile">
+            <article>
+                <h2>About Me</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th colspan="2">My Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Name</strong></td>
+                            <td>Siti Nur Syuhada binti Alias</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Age</strong></td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BirthDate</strong></td>
+                            <td>10 July 2004</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form">
+            <h2>Additional Details</h2>
+            <form action="#" method="POST">
+                <!-- Name & Email fields added to fulfill initial criteria -->
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Gender Radio Buttons -->
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" id="gender-male" name="gender" value="male">
+                    <label for="gender-male">Male</label>
+                    
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    <label for="gender-female">Female</label>
+                    
+                    <input type="radio" id="gender-other" name="gender" value="other">
+                    <label for="gender-other">Other</label>
+                </div>
+
+                <!-- Hobbies Checkboxes -->
+                <div>
+                    <label>Favorite Hobbies:</label>
+                    <input type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+                    <label for="hobby-reading">Reading</label>
+                    
+                    <input type="checkbox" id="hobby-hiking" name="hobbies" value="hiking">
+                    <label for="hobby-hiking">Hiking</label>
+                    
+                    <input type="checkbox" id="hobby-gaming" name="hobbies" value="gaming">
+                    <label for="hobby-gaming">Gaming</label>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Siti Nur Syuhada. All rights reserved.</p>
+    </footer>
+</body>
+</html>
