@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Hackathon 2026</title>
+</head>
+<body>
+
+    <!-- 1. Semantic Structure: Header Section -->
+    <header>
+        <h1>Faculty Hackathon 2026</h1>
+        <p>Code, Innovate, and Build the Future in 24 Hours!</p>
+    </header>
+
+    <!-- 1. Semantic Structure: Navigation Bar with Internal Links -->
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main>
+
+        <!-- 1. Semantic Structure: About Section -->
+        <!-- This section uses two article elements to introduce key event highlights -->
+        <section id="about">
+            <h2>About the Event</h2>
+            
+            <article>
+                <h3>Keynote Speaker: Prof.Ts.Dr. Amir Ngah</h3>
+                <p>An expert in Artificial Intelligence and Cloud Computing from the Tech Research Center, Prof.Ts.Dr. Amir Ngah will speak on modern trends in system optimization and scalable code development architectures.</p>
+            </article>
+
+            <article>
+                <h3>Main Highlight: Rapid Prototyping Workshop</h3>
+                <p>A hands-on coding sprint guided by industry engineers to help teams rapidly transform raw software concepts into working user interfaces and functional application code blocks.</p>
+            </article>
+        </section>
+
+        <!-- 2. Event Schedule Table Section -->
+        <!-- This section features a detailed 6-row schedule displaying layout spanning rules -->
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Venue</th>
+                        <th>Person in Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00 AM - 09:00 AM</td>
+                        <td>Participant Registration</td>
+                        <td>Main Foyer</td>
+                        <td>Registration Committee</td>
+                    </tr>
+                    <tr>
+                        <td>09:00 AM - 10:30 AM</td>
+                        <td>Opening Keynote &amp; Project Briefing</td>
+                        <!-- Rowspan example: Main Auditorium venue spans across two consecutive sessions -->
+                        <td rowspan="2">Main Auditorium</td>
+                        <td>Prof.Ts.Dr. Amir Ngah</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 AM - 01:00 PM</td>
+                        <td>Hacking Session Starts: Phase 1</td>
+                        <td>Technical Mentors</td>
+                    </tr>
+                    <tr>
+                        <td>01:00 PM - 02:00 PM</td>
+                        <!-- FIXED: 1 time cell + 3 spanned cells = exactly 4 columns total -->
+                        <td colspan="3">Lunch Break (Catering Hall - All Participants &amp; Committee Members)</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM - 05:00 PM</td>
+                        <td>Hacking Session: Phase 2 &amp; Code Optimization</td>
+                        <td>Lab 3 &amp; Lab 4</td>
+                        <td>Technical Mentors</td>
+                    </tr>
+                    <tr>
+                        <td>05:00 PM - 06:30 PM</td>
+                        <td>Final Project Demos &amp; Closing Ceremony</td>
+                        <td>Main Auditorium</td>
+                        <td>Judging Panel</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3. Registration Form Section -->
+        <!-- Captures student registration details via standardized web input methods -->
+        <section id="register">
+            <h2>Registration Form</h2>
+            <form action="register.html" method="post">
+                
+                <!-- Text Inputs with matching label variables -->
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <br>
+                <div>
+                    <label for="matric">Matric Number:</label>
+                    <input type="text" id="matric" name="matric" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+
+                <!-- Radio Buttons sharing an identical name grouping -->
+                <div>
+                    <label>Year of Study:</label><br>
+                    <input type="radio" id="year1" name="year_of_study" value="Year 1">
+                    <label for="year1">Year 1</label>
+                    
+                    <input type="radio" id="year2" name="year_of_study" value="Year 2">
+                    <label for="year2">Year 2</label>
+                    
+                    <input type="radio" id="year3" name="year_of_study" value="Year 3">
+                    <label for="year3">Year 3</label>
+                    
+                    <input type="radio" id="year4" name="year_of_study" value="Year 4">
+                    <label for="year4">Year 4</label>
+                </div>
+                <br>
+
+                <!-- Session Checkboxes -->
+                <div>
+                    <label>Select Sessions to Join:</label><br>
+                    <input type="checkbox" id="session1" name="sessions" value="Keynote">
+                    <label for="session1">Opening Keynote</label>
+                    
+                    <input type="checkbox" id="session2" name="sessions" value="Workshop">
+                    <label for="session2">Prototyping Workshop</label>
+                    
+                    <input type="checkbox" id="session3" name="sessions" value="Hackathon">
+                    <label for="session3">24-Hour Hackathon Sprint</label>
+                </div>
+                <br>
+
+                <!-- Drop-down List Selector -->
+                <div>
+                    <label for="programme">Programme / Faculty:</label>
+                    <select id="programme" name="programme">
+                        <option value="cs">Bachelor of Computer Science</option>
+                        <option value="se">Bachelor of Software Engineering</option>
+                        <option value="it">Bachelor of Information Technology</option>
+                        <option value="is">Bachelor of Information Systems</option>
+                    </select>
+                </div>
+                <br>
+
+                <!-- Submit Button element -->
+                <div>
+                    <button type="submit">Submit Registration</button>
+                </div>
+                
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 1. Semantic Structure: Footer Section -->
+    <footer>
+        <p>Organised by: Faculty of Computer Science and Information Technology Committee</p>
+        <p>&copy; 2026 Faculty Hackathon. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
