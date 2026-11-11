@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 4 - The Wizarding World Fan Club</title>
+
+  <!-- External CSS: layout, navigation, links, footer -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS: video and form styling specific to this page -->
+  <style>
+    /* Video fits the design: scales with the section, keeps 16:9 */
+    figure.video-box { margin: 1rem 0 0; }
+
+    figure.video-box video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border: 3px solid #c8a24a;
+      border-radius: 8px;
+    }
+
+    figure.video-box figcaption {
+      margin-top: .5rem;
+      font-size: .9rem;
+      font-style: italic;
+      color: #5a4a3a;
+      text-align: center;
+    }
+
+    /* Form */
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 36rem;
+    }
+
+    form label { font-weight: bold; display: block; margin-bottom: .25rem; }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: .6rem .75rem;
+      font: inherit;
+      border: 1px solid #b9a77a;
+      border-radius: 6px;
+      background: #fffdf6;
+    }
+
+    form input:focus,
+    form select:focus,
+    form textarea:focus {
+      outline: 3px solid #c8a24a;
+      border-color: #740001;
+    }
+
+    form fieldset {
+      border: 1px solid #d9ccaa;
+      border-radius: 6px;
+      padding: .5rem .9rem .75rem;
+    }
+    form legend { font-weight: bold; padding: 0 .4rem; color: #740001; }
+    form fieldset label { display: inline-block; font-weight: normal; margin-right: 1rem; }
+
+    form button {
+      justify-self: start;
+      padding: .7rem 1.6rem;
+      font: inherit;
+      font-weight: bold;
+      color: #c8a24a;
+      background: #740001;
+      border: 2px solid #c8a24a;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    form button:hover  { background: #1b1530; }
+    form button:active { background: #000; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>The Wizarding World Fan Club</h1>
+    <p>Books, films, houses and spells: all in one common room.</p>
+  </header>
+
+  <!-- Navigation bar: unordered list of links to each section -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#watch">Watch</a></li>
+      <li><a href="#join">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About the club</h2>
+      <p>We are a fan group for readers and viewers of the Harry Potter stories.
+         We meet to discuss the books, rewatch the films and trade theories.
+         For the official home of the series, visit
+         <a href="https://www.wizardingworld.com" target="_blank" rel="noopener">Wizarding World</a>.
+         This is an unofficial student project.</p>
+
+      <article>
+        <h3>Book and film nights</h3>
+        <p>Each month we pick one story, read or watch it together, and compare what changed on screen.</p>
+      </article>
+
+      <article>
+        <h3>House quizzes</h3>
+        <p>Friendly competitions between Gryffindor, Hufflepuff, Ravenclaw and Slytherin fans, with points for the winners.</p>
+      </article>
+    </section>
+
+    <section id="watch">
+      <h2>Watch: a fun clip chosen by the fans</h2>
+      <p>A short clip about Harry and Malfoy duel life at a school of magic.</p>
+
+      <figure class="video-box">
+		  <video controls preload="metadata">
+			<source src="castle.mp4.mp4" type="video/mp4">
+		  </video>
+		  <figcaption>Figure 1: Harry and Draco Malfoy during their duel in Harry Potter.</figcaption>
+		</figure>
+    </section>
+
+    <section id="join">
+      <h2>Join the club</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="house">Your house</label>
+          <select id="house" name="house">
+            <option>Gryffindor</option>
+            <option>Hufflepuff</option>
+            <option>Ravenclaw</option>
+            <option>Slytherin</option>
+            <option>Not sorted yet</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Favourite format</legend>
+          <label><input type="radio" name="format" value="books" checked> Books</label>
+          <label><input type="radio" name="format" value="films"> Films</label>
+        </fieldset>
+
+        <div>
+          <label for="message">Tell us about your favourite character</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Send application</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Wizarding World Fan Club (unofficial student project).
+       <a href="#about">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
