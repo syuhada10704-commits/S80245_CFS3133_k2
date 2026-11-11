@@ -1,0 +1,123 @@
+/* style.css - external stylesheet for lab4.html (Harry Potter fan page) */
+
+:root {
+  --night: #1b1530;       /* deep midnight purple */
+  --parchment: #f3ead7;
+  --card: #fbf6ea;
+  --gold: #c8a24a;
+  --gold-dark: #8a6b1f;
+  --crimson: #740001;
+  --visited: #5b3a8c;
+  --line: #d9ccaa;
+  --ink: #2a2220;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Palatino Linotype", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--parchment);
+}
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(180deg, var(--night), #2c2150);
+  color: var(--gold);
+  padding: 2.25rem 1.25rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+header h1 {
+  margin: 0 0 .25rem;
+  font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+  letter-spacing: .04em;
+  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+header p { margin: 0; color: #e8dcc0; font-style: italic; }
+
+/* ---------- Navigation: unordered list styled as a bar ---------- */
+nav { background: var(--crimson); }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav li { margin: 0; }
+
+nav a {
+  display: block;
+  padding: .85rem 1.6rem;
+  color: var(--parchment);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+nav a:hover,
+nav a:focus {
+  background: var(--gold);
+  color: var(--night);
+  text-decoration: underline;
+}
+nav a:active { background: var(--night); color: var(--gold); }
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2rem;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  margin-top: 0;
+  color: var(--crimson);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: .4rem;
+}
+
+article {
+  border-left: 4px solid var(--crimson);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+}
+article h3 { margin: 0 0 .25rem; color: var(--night); }
+
+/* ---------- Links in body text: link states ---------- */
+main a:link    { color: var(--crimson); text-decoration: underline; }
+main a:visited { color: var(--visited); text-decoration: underline dotted; }
+main a:hover   { color: var(--night); text-decoration: none; background: #efe0b0; }
+main a:focus   { outline: 3px solid var(--gold); outline-offset: 2px; }
+main a:active  { color: #c0392b; text-decoration: overline underline; }
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--night);
+  color: #cfc4a6;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: .9rem;
+}
+footer a { color: var(--gold); text-decoration: underline; }
+footer a:hover { text-decoration: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; }
+  nav a  { text-align: center; border-top: 1px solid rgba(255,255,255,.2); }
+  section { padding: 1rem; }
+}
