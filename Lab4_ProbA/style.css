@@ -1,0 +1,171 @@
+/* ===== General page styles ===== */
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 16px;
+  color: #1F2A30;
+  background-color: #FBF6EC;
+  margin: 0;
+}
+
+/* ===== Text decoration on headings ===== */
+h1 {
+  text-decoration: overline;   /* line above the main title */
+  font-size: 40px;
+  margin: 0;
+}
+h2 {
+  text-decoration: underline;  /* line under section titles */
+  color: #0B4F6C;
+}
+h3 {
+  color: #D1495B;
+  margin-top: 0;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #0B4F6C;
+  color: #FFFFFF;
+  padding: 24px 5%;
+  text-align: center;
+}
+
+/* ===== Navigation bar ===== */
+nav ul {
+  list-style-type: none;       /* remove bullets */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #08384D;
+}
+nav li {
+  flex: 1 1 120px;
+}
+nav a {
+  display: block;
+  background-color: #08384D;
+  padding: 14px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;       /* remove underline */
+}
+/* Menu item changes colour when the mouse is over it */
+nav a:hover {
+  background-color: #F4B942;
+}
+
+section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+#destinations {
+  border-bottom: 2px solid #F4B942;
+}
+#video {
+  text-align: center;
+  border-bottom: 2px solid #F4B942;
+}
+#trip {
+  padding-bottom: 32px;
+}
+
+.center {
+  text-align: center;
+}
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #D9CBB0;
+  border-left: 6px solid #D1495B;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+.price {
+  font-weight: bold;
+}
+.old-price {
+  text-decoration: line-through;  
+  color: #777777;
+}
+.new-price {
+  color: #D1495B;
+  font-size: 20px;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+}
+figcaption {
+  padding-top: 8px;
+}
+
+.trip-form {
+  background-color: #FFFFFF;
+  border: 2px solid #0B4F6C;
+  padding: 16px 20px;
+  width: 90%;
+  max-width: 500px;
+}
+.trip-form label {
+  margin-right: 12px;
+}
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+}
+.trip-form fieldset {
+  margin-bottom: 12px;
+  border: 1px solid #D9CBB0;
+}
+.trip-form input[type="submit"] {
+  background-color: #0B4F6C;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #08384D;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 16px 5%;
+}
+address {
+  font-style: normal;
+}
+
+a:link {
+  color: #0B6E99;
+}
+a:visited {
+  color: #7D3C98;
+}
+a:hover {
+  color: #E67E22;
+}
+a:active {
+  color: #C0392B;
+}
+
+nav a:link, nav a:visited,
+footer a:link, footer a:visited {
+  color: #FFFFFF;
+}
+nav a:hover {
+  color: #08384D;
+}
+footer a:hover {
+  color: #F4B942;
+}
+nav a:active, footer a:active {
+  color: #FFD6D6;
+}
