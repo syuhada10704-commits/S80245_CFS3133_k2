@@ -1,0 +1,40 @@
+/* ===== Navigation bar styles (moved from the page) ===== */
+nav ul {
+  list-style-type: none;   /* remove bullets */
+  margin: 0;
+  padding: 0;
+  background-color: #1A5276;
+  overflow: hidden;
+}
+nav li {
+  float: left;
+}
+
+/* Links displayed as blocks so the whole area is clickable */
+nav a {
+  display: block;
+  background-color: #1A5276;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Nav links sit on a dark background, so use light text.
+   Written in the order link, visited, hover, active. */
+nav a:link, nav a:visited {
+  color: #FFFFFF;
+}
+/* Different background colour when the mouse is over a menu item */
+nav a:hover {
+  background-color: #E67E22;
+  color: #FFFFFF;
+}
+nav a:active {
+  background-color: #C0392B;
+  color: #FFFFFF;
+}
+
+/* ===== Footer address ===== */
+address {
+  font-style: normal;
+}
