@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Added in Part 2: viewport meta tag for small screens -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-Café Campus</title>
+
+<!-- Added in Part 2: external style sheet (navigation bar styles) -->
+<link rel="stylesheet" href="cafe.css">
+
+<style>
+
+a:link {color: #1A5276;}
+a:visited {color: #7D3C98;}
+a:hover {color: #E67E22;}
+a:active {color: #C0392B;}
+h1 {text-decoration: overline;}
+p {color: #333333; text-align: justify;}
+#intro {
+  font-size: 18px;
+  background-color: #FDEBD0;
+}
+.highlight {
+  font-weight: bold;
+  color: #C0392B;
+}
+
+/* Part 2: promotion, caption, responsive video and form */
+.old-price {
+  text-decoration: line-through;
+  color: #777777;
+}
+/* Video on small screens */
+video {
+  max-width: 100%;
+  height: auto;
+}
+/* Feedback form */
+.feedback-form {
+  background-color: #FDEBD0;
+  border: 2px solid #1A5276;
+  padding: 16px 20px;
+  width: 90%;
+  max-width: 480px;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+<h1>e-Café Campus</h1>
+</header>
+
+<!-- ===== NAVIGATION BAR (styled in cafe.css) ===== -->
+<nav>
+<ul>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#feedback">Feedback</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- ===== MENU SECTION ===== -->
+<section id="menu">
+<h2>Today's Menu</h2>
+<p id="intro">Freshly brewed coffee and local delights every day.</p>
+
+<!-- Each item shows the old price crossed out, then the new price -->
+<article class="item">
+<h3>Kopi Tarik</h3>
+<p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+</article>
+<article class="item">
+<h3>Nasi Lemak</h3>
+<p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+</article>
+</section>
+
+<!-- ===== VIDEO SECTION ===== -->
+<section id="video">
+<h2>Watch Our Story</h2>
+<!-- Figure and figcaption give the video a caption -->
+<figure>
+<video width="400" height="300" controls>
+<source src="cafe.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<figcaption>Our story: from one coffee cart to the campus café.</figcaption>
+</figure>
+</section>
+
+<!-- ===== FEEDBACK SECTION (new) ===== -->
+<section id="feedback">
+<h2>Give Us Your Feedback</h2>
+<form class="feedback-form" action="#" method="post">
+<p>
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name">
+</p>
+<p>
+<label for="email">E-mail:</label><br>
+<input type="email" id="email" name="email">
+</p>
+
+<!-- Visit type: radio buttons share one name so only one can be chosen -->
+<fieldset>
+<legend>Visit type</legend>
+<label><input type="radio" name="visit" value="dine-in"> Dine-in</label>
+<label><input type="radio" name="visit" value="take-away"> Take-away</label>
+</fieldset>
+
+<!-- Favourite items: checkboxes allow more than one choice -->
+<fieldset>
+<legend>Favourite items</legend>
+<label><input type="checkbox" name="fav" value="kopi-tarik"> Kopi Tarik</label>
+<label><input type="checkbox" name="fav" value="nasi-lemak"> Nasi Lemak</label>
+<label><input type="checkbox" name="fav" value="roti-canai"> Roti Canai</label>
+</fieldset>
+
+<p><input type="submit" value="Submit"></p>
+</form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact">
+<p>&copy; 2026 e-Café Campus</p>
+<!-- Address element with an e-mail link -->
+<address>
+Contact: <a href="mailto:cafe@campus.example">cafe@campus.example</a>
+</address>
+</footer>
+</body>
+</html>
