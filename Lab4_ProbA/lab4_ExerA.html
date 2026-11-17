@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset ="utf-8">
+	<meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+	<title>Visit Terengganu</title>
+	
+	<link rel="stylesheet" href="style.css">
+	
+	<style>
+	.seats-label {
+		font-weight:bold;
+		color: #0B4F6C;
+	}
+	
+	#video figcaption{
+		font-style: italic;
+		color: #555555;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Visit Terengganu</h1>
+	<p class="center">Sun, sea and heritage on Malayisa's east cost</p>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="#destinations">Destinations</a></li>
+		<li><a href="#video">Video</a></li>
+		<li><a href="#trip">Join a Trip</a></li>
+	</ul>
+</nav>
+
+<section id="destinations">
+	<h2>Top Destinations</h2>
+	
+	<article class="card">
+		<h3>Perhentian Island</h3>
+		 <p>Crystal-clear water, white sand and some of the best snorkelling in Malaysia.</p>
+		 <p class="price"><span class="old-price">RM 299</span> <span class="new-price">RM 199</span></p>
+		</article>
+	
+	 <article class="card">
+      <h3>Lake Kenyir</h3>
+      <p>The largest man-made lake in Southeast Asia, with waterfalls and houseboat stays.</p>
+      <p class="price"><span class="old-price">RM 249</span> <span class="new-price">RM 169</span></p>
+    </article>
+
+    <article class="card">
+      <h3>Kuala Terengganu Heritage Walk</h3>
+      <p>Visit the Crystal Mosque, Chinatown and the Pasar Payang market for local food and crafts.</p>
+      <p class="price"><span class="old-price">RM 120</span> <span class="new-price">RM 79</span></p>
+    </article>
+
+    <p>
+      <span class="seats-label">Trip seats filled:</span>
+      <meter min="0" max="40" value="28">28 of 40</meter> 28 / 40
+    </p>
+  </section>
+
+  <section id="video">
+    <h2>Watch and Be Inspired</h2>
+    <figure>
+      <video width="560" height="315" controls>
+        <source src="terengganu.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>A short look at the beaches and culture of Terengganu.</figcaption>
+    </figure>
+  </section>
+
+  <section id="trip">
+    <h2>Tell Us About Your Trip</h2>
+    <form class="trip-form" action="#" method="post">
+      <p>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name">
+      </p>
+      <p>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email">
+      </p>
+
+      <fieldset>
+        <legend>Traveller type</legend>
+        <label><input type="radio" name="traveller" value="student"> Student</label>
+        <label><input type="radio" name="traveller" value="staff"> Staff</label>
+        <label><input type="radio" name="traveller" value="public"> Public</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests</legend>
+        <label><input type="checkbox" name="interest" value="islands"> Islands</label>
+        <label><input type="checkbox" name="interest" value="food"> Food</label>
+        <label><input type="checkbox" name="interest" value="culture"> Culture</label>
+        <label><input type="checkbox" name="interest" value="nature"> Nature</label>
+      </fieldset>
+
+      <p><input type="submit" value="Submit"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Terengganu Tourism Office</p>
+    <address>
+      Contact: <a href="mailto:info@visitterengganu.example">info@visitterengganu.example</a>
+    </address>
+  </footer>
+
+</body>
+</html>
