@@ -1,0 +1,157 @@
+/* General Body Styling & Font Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8; /* Soft light blue-gray background */
+    color: #2d3748; /* Dark gray text for high contrast and readability */
+    line-height: 1.7;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #003366 0%, #005b96 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.05rem;
+    color: #d9e6f2;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #002244;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+nav ul li a:hover {
+    background-color: #f59e0b; /* Vibrant gold/amber accent */
+    color: #002244;
+}
+
+/* Main Container & Section Spacing */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+article, section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* Paragraph Alignment & Spacing */
+article p, section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+article p:last-child, section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Table Styling (Borders, Alternating Rows, Padding, Hover) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #005b96;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Table Row Hover Effect */
+tbody tr:hover {
+    background-color: #e0f2fe;
+    transition: background-color 0.2s ease;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
